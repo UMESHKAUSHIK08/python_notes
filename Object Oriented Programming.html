@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://python.slides.com/colt/lists-18#/30 -->
+<html class="sl-root decks show mz-history mz-svg mz-localstorage mz-csspositionsticky mz-supports mz-cssanimations mz-backgroundsize mz-no-cssgridlegacy mz-cssgrid mz-flexbox mz-csstransforms mz-csstransforms3d mz-csstransitions mz-fullscreen mz-webpanimation loaded ua-windows ua-chrome has-visible-scrollbars gr__python_slides_com reveal-is-ready fonts-are-ready" data-account=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Object Oriented Programming</title>
+    <meta name="description" content="A presentation created with Slides.">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Object Oriented Programming">
+    <meta property="og:description" content="A presentation created with Slides.">
+    <meta property="og:site_name" content="Slides">
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/959448b014c56deb91620856443cdd0e/thumb.jpg?1505866999">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://python.slides.com/colt/lists-18">
+    <meta property="fb:app_id" content="146002942236376">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="manifest" href="http://python.slides.com/manifest.json">
+
+    <link href="./Object Oriented Programming_files/css" rel="stylesheet" type="text/css" data-application-font="opensans">
+
+    <link rel="stylesheet" media="all" href="./Object Oriented Programming_files/slides-8a5ab5ebb84fcd5a99a8c73434bd36b521c6571e2121184c32e4742d26106c14.css">
+    <link rel="stylesheet" media="all" href="./Object Oriented Programming_files/application-ff1bce42b5fe3a66f2c7c58907d97b32aa86cbbef31ecc0b03ac91f6a14f4c21.css">
+    	<link rel="stylesheet" media="all" href="./Object Oriented Programming_files/deck-v2-6853fb93cf33185f1e80dae6bcb6b0856c26856c3c882786b8e300caa8ac55cd.css">
+
+<style id="global-css-output" type="text/css"></style>
+
+<style id="theme-css-output" type="text/css">@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+.reveal {
+  
+
+  
+
+}
+.reveal .slides {
+  font-family: 'Open Sans';
+}
+.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3 {
+  font-family: "Oswald";
+  font-weight: 300;
+}
+</style>
+
+<style id="user-css-output" type="text/css">@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+.reveal {
+  
+
+  
+
+}
+.reveal .progress span {
+  background: #ff0000;
+}
+.reveal .slides {
+  font-family: 'Open Sans';
+}
+.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3 {
+  font-family: "Oswald";
+  font-weight: 300;
+}
+</style>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ZlOUB0rseA0gRN0QaRG+2LP1kXfMFr2zcpQ711CSx8CEAVBvjwYIRfIg2woH0zBFyaLSSLvJSwUfgdisHMZDYQ==">
+    <script type="application/javascript" async="" defer="" src="./Object Oriented Programming_files/track.js.download"></script><script type="text/javascript" async="" src="./Object Oriented Programming_files/f7sH7NavrjjvuGxByaw.js.download"></script><script async="" src="./Object Oriented Programming_files/analytics.js.download"></script><script type="text/javascript">
+  if( !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    <!--[if lt IE 9]>
+    <script src="//assets.slid.es/assets/html5shiv-0bfa553ebc9c42abf66248f2f3feba0935da70b430bace410f80b72729c14820.js"></script>
+<![endif]-->
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="Object Oriented Programming">
+	<meta name="twitter:description" content="An presentation created with Slides.">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/959448b014c56deb91620856443cdd0e/thumb.jpg?1505866999">
+
+  <style type="text/css"></style><link rel="stylesheet" href="./Object Oriented Programming_files/overpass2.css"><style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-icon-trigger{display:block;width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;border:1px solid transparent;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><style></style><script type="text/javascript" async="" src="./Object Oriented Programming_files/embed.js.download"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.d49f53e192b9080ef8880a7c9b24f1c3.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.18932c85febf9520158697cdc31f08ae.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.e7b46487e9e041aabc7c7cff31722578.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"></head>
+  <body data-gr-c-s-loaded="true" style="transition: -webkit-transform 0.8s ease 0s;">
+    
+    <div id="container" class="container">
+      <header class="global-header show-on-scroll extra-wide">
+  <div class="wrapper">
+    <h1 class="logo-image-or-text">
+      <a href="http://python.slides.com/">
+        Python
+      </a>
+    </h1>
+    <ul class="nav">
+
+        <li class="nav-item">
+          <a class="nav-item-anchor" href="http://python.slides.com/users/sign_in">
+            <span class="nav-item-label">Log in</span>
+          </a>
+        </li>
+
+    </ul>
+  </div>
+</header>
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-overpass2 theme-color-white-blue">
+			<div class="reveal slide has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="slide">
+				<div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.835714);">
+					<section data-id="c1abf5caacf85bb72326f71602730ff6" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;" data-block-id="ded8ed6386026aa241af3d0c58a37d72"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 178%; color: rgb(0, 188, 212); border-width: 1px;">
+<h1><span style="font-size:1.6em"><span style="color:#009688">object oriented programming</span></span></h1>
+</div></div>
+
+</section><section data-id="72613d6df272169fe58eec642f696f0a" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 83px; height: auto;" data-block-id="869bd51abc3d366cf064d84e9f166617"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<h1>Objectives</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 668px; left: 146px; top: 280px; height: auto;" data-block-id="97f90bad5c04f6708a8a7fec13eca365"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li class="fragment visible" data-fragment-index="0">Define what Object Oriented Programming is</li>
+	<li class="fragment visible" data-fragment-index="1">Understand encapsulation and abstraction</li>
+	<li class="fragment visible" data-fragment-index="2">Create classes and instances and attach methods and properties to each</li>
+</ul>
+</div></div></section><section data-id="72968d7eb1a32594add3e6fef6a5643e" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 808px; left: 76px; top: 75px; height: auto;" data-block-id="78a833120fa0879aa2577a7f32a3eee7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>What is OOP?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 804px; left: 80px; top: 210px; height: auto;" data-block-id="68bd1f2ab16d8b2f77be8a26211ba90b"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Object oriented programming is a method of programming that attempts to model some process or thing in the world as a </span><strong>class</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;or </span><strong>object</strong><span style="color:rgb(51, 51, 51); text-align:start">. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 384px; height: auto;" data-block-id="d460228dd15bb2faaf9410e1b5d21a8b"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p style="color:rgb(51, 51, 51)"><strong>class</strong>&nbsp;- a blueprint for objects. Classes can contain methods (functions) and attributes (similar to keys in a dict).</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 524px; height: auto;" data-block-id="5cc14fbbf748de2d5aaaaccb91ed6f25"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: center;" data-fragment-index="2">
+<p style="color:rgb(51, 51, 51)"><strong>instance</strong>&nbsp;- objects that are constructed from a class blueprint that contain their class's methods and properties.</p>
+</div></div></section><section data-id="0d175da3d33e108b3c3c3e78cf7f2b19" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c9f68b33248e67cdb98b3d36915d0aee"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Why OOP?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 861px; left: 50px; top: 181px; height: auto;" data-block-id="c4f598547e6284c783f7a814a819826d"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p><span style="color:rgb(51, 51, 51); text-align:start">With object oriented programming, the goal is to </span><em>encapsulate</em><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;your code into <strong>logical, hierarchical groupings</strong> <strong>using classes</strong> so that you can reason about your code at a higher level. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="4b63a89b0e4215af839bc7b34417861c" style="min-width: 30px; min-height: 30px; width: 528px; height: 339px; left: 192px; top: 331px;"><div class="sl-block-content fragment visible" style="z-index: 13;" data-inline-svg="false" data-fragment-index="1"><img data-natural-width="992" data-natural-height="637" style="" data-lazy-loaded="" src="./Object Oriented Programming_files/Taxonomic_Rank_Graph.svg"></div></div></section><section data-id="7e8732d6024573b3bfda041136657348" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="34ba06db92cd2ad1f968b4d4352aff74"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Example</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 164px; left: 201px; top: 333px; height: auto;" data-block-id="417603266538d75ebda38c7b87e5a822"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;" data-fragment-index="3">
+<ul>
+	<li>Game</li>
+	<li>Player</li>
+	<li>Card</li>
+	<li>Deck</li>
+	<li>Hand</li>
+	<li>Chip</li>
+	<li>Bet</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="55d71aaa1b668da62e2e6e4eab63efb5" style="height: auto; min-width: 30px; min-height: 30px; width: 806px; left: 92px; top: 192px;"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Say we want to model a game of <strong>poker</strong> in our program.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 630px;" data-block-id="9f7ecd17d198af787b1749bac18a24d0"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="4">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Each entity could be its own class in our program!</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 520px; left: 200px; top: 269px;" data-block-id="8e2dd7e583cb5d3336ac4b1444f73d5b"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="2">
+<p style="text-align: left;"><span style="color:rgb(51, 51, 51); text-align:start">We could have the following entities:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="da440deda331273af4597450404ee415" style="min-width: 30px; min-height: 30px; width: 301px; height: 226px; left: 378px; top: 349px;"><div class="sl-block-content fragment visible" style="z-index: 16;" data-fragment-index="1"><img data-natural-width="4592" data-natural-height="3448" style="" data-lazy-loaded="" src="./Object Oriented Programming_files/Laptop_with_poker_cards_and_poker_chips.jpg"></div></div></section><section data-id="ab67d4347856f2b7682954562a0019b8" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="04680db5043053faf5c02fe52b5df72f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Example <span style="font-size:0.7em">(continued)</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 320px; left: 320px; top: 280px;" data-block-id="f1d5dca7b6ff337e9cf938191c097ab9"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;" data-fragment-index="1">
+<pre style="text-align: center;"><strong>Deck {class}</strong></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 719px; left: 161px; top: 355px;" data-block-id="1e245223f839179a50a4d531f28bd3a9"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left;" data-fragment-index="2">
+<ul>
+	<li>
+	<pre>_cards         {private list attribute}</pre>
+	</li>
+	<li>
+	<pre>_max_cards     {private int attribute}</pre>
+	</li>
+	<li>
+	<pre>shuffle        {public method}</pre>
+	</li>
+	<li>
+	<pre>deal_card      {public method}</pre>
+	</li>
+	<li>
+	<pre>deal_hand      {public method}</pre>
+	</li>
+	<li>
+	<pre>count          {public method}</pre>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f6082117917b53d310c5f90437ba52a4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 174px;"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="0">
+<p>Card Deck Possible Implementation (Pseudocode)</p>
+</div></div></section><section data-id="f30f173ed3d0bb227438d1c9b306e29e" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="66fed7d71fddebf8eeac0b4b2f794daf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Encapsulation</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 23px; top: 208px;" data-block-id="11f8d95e19fed024676f88815bf9505e"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;" data-fragment-index="0">
+<p><strong>Encapsulation</strong>&nbsp;- the grouping of public and private attributes and methods into a programmatic class, making <strong>abstraction</strong> possible</p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 938px; left: 12px; top: 452px;" data-block-id="069ddf884b8b073de59434375c6c1916"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;">
+<ul>
+	<li class="fragment visible" data-fragment-index="2">
+<span style="text-align:left">Designing the Deck class, I make </span><strong>cards</strong><span style="text-align:left">&nbsp;a private attribute (a list)</span>
+</li>
+	<li class="fragment visible" data-fragment-index="3">I decide that the length of the cards should be accessed via a public method called <strong>count()</strong>&nbsp;-- i.e. <strong>Deck.count()</strong>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 938px; left: 12px; top: 384px;" data-block-id="5fc062d433449cdbb99b09b23fcc7d4a"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: center;" data-fragment-index="1">
+<p><em>Example</em></p>
+</div></div></section><section data-id="b4180e55749765a7e27bc30d32d1bdb6" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="500735758efb42ffe49f50f51fc034b5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Abstraction</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 929px; left: 16px; top: 210px;" data-block-id="3677208a4caa8f3417ce003beb5b7610"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: center;" data-fragment-index="0" dir="ui">
+<p><strong>Abstraction</strong>&nbsp;- exposing only "relevant" data in a class interface, hiding private attributes and methods (aka the "inner workings") from users</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 938px; left: 11px; top: 472px;" data-block-id="bec4c4af9b4181846273c0c75ef85627"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center;" data-fragment-index="1">
+<ul>
+	<li>
+<span style="text-align:left">As a user of the </span><strong style="text-align:left">Deck</strong><span style="text-align:left"> class, I never call </span><strong style="text-align:left">len(Deck.cards)</strong><span style="text-align:left">, only </span><strong style="text-align:left">Deck.count()</strong><span style="text-align:left">&nbsp;because </span><strong style="text-align:left">Deck.cards</strong><span style="text-align:left">&nbsp;is "abstracted away" for me.</span>
+</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 938px; left: 16px; top: 402px;" data-block-id="b0e2aa530dddb70b6c7658c097665230"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; text-align: center;" data-fragment-index="1">
+<p><em>Example</em></p>
+</div></div></section><section data-id="949200ef78a6a9c0c829e87ecd9cd576" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="0c276bdfe74c4ea87c8b5a278df11c11"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Creating a Class</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="01317f4c207b878398aafe9ce40b1800" style="min-width: 30px; min-height: 30px; width: 548px; height: 161px; left: 206px; top: 210px;"><div class="sl-block-content fragment visible" style="z-index: 11; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="0"><pre><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Vehicle</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, make, model, year)</span></span>:
+        <span class="hljs-keyword">self</span>.make = make
+        <span class="hljs-keyword">self</span>.model = model
+        <span class="hljs-keyword">self</span>.year = year</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="dc153dc414aa2366296827d01c401448" style="height: auto; min-width: 30px; min-height: 30px; width: 888px; left: 36px; top: 463px;"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p>Classes in Python can have a special __init__ method, which gets called every time you create an instance of the class (instantiate).</p>
+</div></div></section><section data-id="bcdf79d04589b116929f4df0f55c824a" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="a53b36e75cf7c48353e8df34d4b14fc4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Instantiating a Class</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 450px; height: 36px; left: 255px; top: 273px;" data-block-id="bb8ee8a180b4683cbcba15849044a07d"><div class="sl-block-content fragment visible" style="z-index: 11; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="1"><pre><code class="hljs ini"><span class="hljs-attr">v</span> = Vehicle(<span class="hljs-string">"Honda"</span>, <span class="hljs-string">"Civic"</span>, <span class="hljs-number">2017</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 888px; left: 36px; top: 174px;" data-block-id="c9d73db3292ce5368786f128453000ec"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p>Creating an object that is an instance of a class is called <strong>instantiating</strong>&nbsp;a class.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 888px; left: 36px; top: 332px;" data-block-id="e2f69a9f4d4a9382d02bfb18490e3b21"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="2">
+<p>In this case, <strong>v</strong>&nbsp;becomes a Honda Civic, a new instance of Vehicle</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 450px; height: 205px; left: 255px; top: 402px;" data-block-id="565141b310740edbf54a2d976a9872bd"><div class="sl-block-content fragment visible" style="z-index: 15; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="3"><pre><code class="hljs stylus">v
+&lt;__main__<span class="hljs-selector-class">.Vehicle</span> at <span class="hljs-number">0</span>x10472f5c0&gt;
+v<span class="hljs-selector-class">.make</span>
+<span class="hljs-string">'Honda'</span>
+v<span class="hljs-selector-class">.model</span>
+<span class="hljs-string">'Civic'</span>
+v<span class="hljs-selector-class">.year</span>
+<span class="hljs-number">2017</span></code></pre></div></div></section><section data-id="b6bab4fe952785da3b0f5a33308d22e5" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="120a8df9498c7fe7156a5526dbc9cc7f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<pre style="text-align: center;">self</pre>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 548px; height: 161px; left: 206px; top: 189px;" data-block-id="b34b06a998b740d9bb9a1f50e2fa7a0c"><div class="sl-block-content fragment visible" style="z-index: 11; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="0"><pre><code class="hljs ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Vehicle</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, make, model, year)</span></span>:
+        <span class="hljs-keyword">self</span>.make = make
+        <span class="hljs-keyword">self</span>.model = model
+        <span class="hljs-keyword">self</span>.year = year</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cc110b35e99f1b7c63ad7f1dd8e7463f" style="height: auto; min-width: 30px; min-height: 30px; width: 757px; left: 103px; top: 488px;"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="2">
+<p><strong>self</strong>&nbsp;must always be the first parameter to <strong>__init__</strong> and any methods and properties on class instances.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 709px; left: 126px; top: 402px;" data-block-id="7ac8d42f403996398a88ab637339d128"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
+<p>The <strong>self</strong> keyword refers to the current class instance.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 668px; left: 146px; top: 594px;" data-block-id="1546f05c5d7540e46f5fb411090fb3e1"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="3">
+<p>You never have to pass it directly when calling instance methods, including __init__.</p>
+</div></div></section><section data-id="e3505b7fb9086633ae30034e4a50405b" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 324px; left: 80px; top: 196px;" data-block-id="b5f5016e343a5ebb5e3debe310030773"><div class="sl-block-content fragment visible" style="z-index: 10; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="0"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first_name, last_name)</span>:</span>
+        self.first_name = first_name
+        self.last_name = last_name
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">full_name</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"My name is <span class="hljs-subst">{self.first_name}</span> <span class="hljs-subst">{self.last_name}</span>"</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">likes</span><span class="hljs-params">(self, thing)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{self.first_name}</span> likes <span class="hljs-subst">{thing}</span>!"</span> 
+
+p = Person(<span class="hljs-string">"Colt"</span>, <span class="hljs-string">"Steele"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="21f5c44b2c566d7d22135288a48bf8cf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Instance Attributes and Methods</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 37px; left: 80px; top: 514px;" data-block-id="dfe9d96d1f5545e6ce68acb540909567"><div class="sl-block-content fragment visible" style="z-index: 12; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="1"><pre class="python"><code class="hljs">p.full_name()</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 37px; left: 80px; top: 576px;" data-block-id="6cbf249c71d86a776e0ea6bcfee3e3fd"><div class="sl-block-content fragment visible" style="z-index: 13; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="3"><pre class="python"><code class="hljs">p.likes(<span class="hljs-string">"Python"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 37px; left: 80px; top: 545px;" data-block-id="a9caebabf660b1d1cb0aea477850e81e"><div class="sl-block-content fragment visible" style="z-index: 14; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="2"><pre class="bash"><code class="hljs">Colt Steele</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 34px; left: 80px; top: 607px;" data-block-id="d285fd0768b15adaa5cde3418fbabb3c"><div class="sl-block-content fragment visible" style="z-index: 16; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="4"><pre class="bash"><code class="hljs">Colt likes Python!</code></pre></div></div></section><section data-id="7b8b207eb2d1d3adfbc46c64e3b1eeff" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="72c58191f8c32f53ef42c0d1fffd0ece"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(139, 195, 74);">
+<p>Class Attributes</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d92b4f79f45c354c919b9ee696285853" style="height: auto; min-width: 30px; min-height: 30px; width: 893px; left: 34px; top: 155px;"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>We can also define attributes directly on a class that are shared by all instances of a class and the class itself.</p>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 290px; height: 196px; left: 333px; top: 252px;" data-block-id="9613bbb4f56926f7d87f41f574d6d7a1"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 188, 212)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 290 196"><rect width="290" height="196" class="shape-element" fill="rgb(0, 188, 212)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 183px; top: 287px;" data-block-id="dff2a44838a5caee25388e18b9c65527"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255);">
+<p><span style="font-size:1.2em">PET CLASS</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 178px; top: 350px;" data-block-id="e7e7cb7b2c182815b6b6d6c5455a4da2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">allowed: ['dog', 'cat']</span></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 290px; height: 196px; left: 36px; top: 469px;" data-block-id="a56ec2c9af75c2470277c3db876c5629"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 150, 136)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 290 196"><rect width="290" height="196" class="shape-element" fill="rgb(0, 150, 136)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: -114px; top: 476px;" data-block-id="69f4a40aa64fcdb3bfa1de195bcd67e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; color: rgb(255, 255, 255);">
+<p><span style="font-size:1.2em">PET INSTANCE</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: -120px; top: 591px;" data-block-id="477449ebf94a569ecea3222097673e01"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">allowed: </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: -114px; top: 519px;" data-block-id="cf70f8f77dfc3ac12b1b5685a32cd1cf"><div class="sl-block-style" style="z-index: 18;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">name: 'fluffy'</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: -114px; top: 555px;" data-block-id="d4071464371a4adc3e4cd30691f24ea1"><div class="sl-block-style" style="z-index: 19;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">species: 'dog'</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 250px; top: 395px;" data-block-id="fa7a2315197610aaae4fa39c0dfde657"><div class="sl-block-content" data-line-x1="10" data-line-y1="200" data-line-x2="220" data-line-y2="-14" data-line-color="#673ab7" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 20;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="210" height="214" viewBox="10 -14 210 214"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="10" y1="200" x2="217" y2="-11"></line><line stroke="#673ab7" stroke-width="6" x1="10" y1="200" x2="217" y2="-11"></line><path style="fill: rgba(0,0,0,0);" stroke="#673ab7" stroke-width="6" transform="translate(217,-11) rotate(44.459)" d="M 13.5 13.5 L 0 0 L -13.5 13.5"></path></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 290px; height: 196px; left: 616px; top: 469px;" data-block-id="c99ef7afba3c4753e59e791a79a29029"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 150, 136)" data-shape-stretch="true" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 290 196"><rect width="290" height="196" class="shape-element" fill="rgb(0, 150, 136)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 466px; top: 476px;" data-block-id="5d283ba997d9d7c2c90ab30c8256436c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(255, 255, 255);">
+<p><span style="font-size:1.2em">PET INSTANCE</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 460px; top: 591px;" data-block-id="5a760509b29307049f03e2ed25f3a0ad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">allowed: </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 466px; top: 519px;" data-block-id="63dae71402d64e3534db096178a857e4"><div class="sl-block-style" style="z-index: 25;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">name: 'simon'</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 466px; top: 555px;" data-block-id="1acc0ea938bc215bb44344eba84aee66"><div class="sl-block-style" style="z-index: 26;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(255, 255, 255);">
+<p><span style="font-size:0.9em">species: 'cat'</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 512px; top: 395px;" data-block-id="7604ed27e53c04bc1aaa18d5773c48de"><div class="sl-block-content" data-line-x1="-126" data-line-y1="200" data-line-x2="-308" data-line-y2="-14" data-line-color="#3f51b5" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 27;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="182" height="214" viewBox="-308 -14 182 214"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-126" y1="200" x2="-305" y2="-11"></line><line stroke="#3f51b5" stroke-width="6" x1="-126" y1="200" x2="-305" y2="-11"></line><path style="fill: rgba(0,0,0,0);" stroke="#3f51b5" stroke-width="6" transform="translate(-305,-11) rotate(-40.38)" d="M 13.5 13.5 L 0 0 L -13.5 13.5"></path></svg></div></div></section><section data-id="790524f3c79f0382bec9ebdd8e3042c0" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 322px; left: 34px; top: 235px;" data-block-id="202b5c98fe0e34c85ae0cf22127fc387"><div class="sl-block-content fragment visible" style="z-index: 10; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pet</span><span class="hljs-params">()</span>:</span>
+
+    allowed = (<span class="hljs-string">"cat"</span>, <span class="hljs-string">"dog"</span>, <span class="hljs-string">"bird"</span>, <span class="hljs-string">"lizard"</span>, <span class="hljs-string">"rodent"</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, kind, name)</span>:</span>
+
+        <span class="hljs-keyword">if</span> kind <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> self.allowed:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">f"You can't have a <span class="hljs-subst">{kind}</span> as a pet here!"</span>)
+
+        self.kind = kind
+        self.name = name
+
+fluffy = Pet(<span class="hljs-string">"cat"</span>, <span class="hljs-string">"Fluffy"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="5b113a6c3b331c3570b9bd632ecc9384"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Class Attributes</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 893px; left: 34px; top: 155px;" data-block-id="182fa3f9b969b3af2c359bb86bf5267f"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>We can also define attributes directly on a class that are shared by all instances of a class and the class itself.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 39px; left: 34px; top: 557px;" data-block-id="0dbbae81f043b5d136f71b06ac0a12d0"><div class="sl-block-content fragment visible" style="z-index: 13; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="2"><pre class="python"><code class="hljs">fluffy.allowed</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 36px; left: 34px; top: 588px;" data-block-id="22e1ce13f944a68a012935d1f01a9166"><div class="sl-block-content fragment visible" style="z-index: 14; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="3"><pre class="python"><code class="hljs">(<span class="hljs-string">"cat"</span>, <span class="hljs-string">"dog"</span>, <span class="hljs-string">"bird"</span>, <span class="hljs-string">"lizard"</span>, <span class="hljs-string">"rodent"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 36px; left: 34px; top: 618px;" data-block-id="dba25384f3122c63872a839852572b5e"><div class="sl-block-content fragment visible" style="z-index: 15; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="4"><pre class="python"><code class="hljs">Bro = Pet(<span class="hljs-string">"bear"</span>, <span class="hljs-string">"Bro"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 34px; left: 34px; top: 648px;" data-block-id="ead51084656e6c29cad1052dc8714e67"><div class="sl-block-content fragment visible" style="z-index: 16; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="5"><pre class="python"><code class="hljs">ValueError: You can<span class="hljs-string">'t have a bear as a pet here!</span></code></pre></div></div></section><section data-id="0a6619a1ecf8f63acd5c46e9c9725fad" class="past" style="display: none;" hidden="" aria-hidden="true">
+<div class="sl-block" data-block-type="code" style="width: 893px; height: 205px; left: 34px; top: 267px;" data-block-id="e59afc050d2bbcf971ebb114e56ffaef"><div class="sl-block-content fragment visible" style="z-index: 10; font-size: 130%;" data-highlight-theme="solarized-light" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># ...</span>
+
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">from_csv</span><span class="hljs-params">(cls, filename)</span>:</span>
+        <span class="hljs-keyword">return</span> cls(*params) <span class="hljs-comment"># this is the same as calling Person(*params)</span>
+
+Person.from_csv(my_csv)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="38ab5ef54a46b07deaaef8ed85b91597"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Class Methods</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 833px; left: 64px; top: 163px;" data-block-id="d05d45c78abdc55213fe3370c84e9224"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>Class methods are methods (with the @classmethod decorator) that are not concerned with instances, but the class itself.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 893px; left: 34px; top: 504px;" data-block-id="ee0fd3d2b4b1be9745af7680eda91d8b"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="2">
+<p>The first argument is <strong>cls</strong> (for class) instead of self. Like self, it does not need to be passed in explicitly.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 885px; left: 42px; top: 608px;" data-block-id="1d3ae25e4746a471ed5787d2212b2220"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="3">
+<p>Class methods are available on the class itself and any instances of the class, and are mostly used for building new instances of classes.</p>
+</div></div></section><section data-id="74828342544826d5acc2bf7722cb3dde" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="height: auto; width: 753px; left: 104px; top: 56px;" data-block-id="c0e7dbd84166a15377081b74e5e98bd4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 130%; letter-spacing: -0.010000000000000009em; line-height: 0.8580000000000001;" data-has-letter-spacing="" data-has-line-height="">
+<h1><span style="font-size:5.0em"><span style="color:#009688">YOUR</span> <span style="color:#00bcd4">TURN</span></span></h1>
+</div></div></section><section data-id="4d896b1311110dd8f849766c420779fc" class="past" style="display: none;" hidden="" aria-hidden="true"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 83px; height: auto;" data-block-id="7650f3577ebdb2bb43eefdb38777a1ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<h1>Objectives</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 640px; left: 160px; top: 280px; height: auto;" data-block-id="8b0cd6e285e2e93addae2d6ec90282cc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="fragment visible" data-fragment-index="0">Implement inheritance, including multiple</li>
+	<li class="fragment visible" data-fragment-index="1">Understand Method Resolution Order</li>
+	<li class="fragment visible" data-fragment-index="2">Understand polymorphism</li>
+	<li class="fragment visible" data-fragment-index="3">Add special methods to classes</li>
+</ul>
+</div></div></section><section data-id="eafa10e93b3387df19c305d34e15a4af" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="0398595fd8968e9ad079e9fdc233422b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Inheritance</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 853px; left: 63px; top: 178px;" data-block-id="d778bf3814fd5644881a653050861427"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0">
+<p><span style="color:rgb(51, 51, 51); text-align:start">A key feature of OOP is the ability to define a class which inherits from another class (a "base" or "parent" class).</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 833px; left: 53px; top: 266px;" data-block-id="b55178c58003e506170616863daf90f2"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p><span style="text-align:start">In Python, inheritance works by passing the parent class as an argument to the definition of a child class:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 721px; height: 281px; left: 120px; top: 371px;" data-block-id="5b415057fcb166d3657834261646c13b"><div class="sl-block-style" style="z-index: 14; transform: rotate(360deg);"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 14; font-size: 123%;" data-fragment-index="2"><pre class="ruby"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_sound</span><span class="hljs-params">(<span class="hljs-keyword">self</span>, sound)</span></span>:
+        print(sound)
+
+    cool = True
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span>(<span class="hljs-title">Animal</span>):</span>
+    pass
+
+gandalf = Cat()
+gandalf.make_sound(<span class="hljs-string">"meow"</span>)  <span class="hljs-comment"># meow</span>
+gandalf.cool  <span class="hljs-comment"># True</span></code></pre></div></div></div></section><section data-id="c85b248416578413c80a7ce7e16ce42e" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 75px; height: auto;" data-block-id="f8db86616289c4a3285f21772b6cc0e6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<pre style="text-align: center;">super</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 892px; left: 34px; top: 186px;" data-block-id="cc6cbb687c4fbf7b0410cbdd07cd321f"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;" data-fragment-index="0">
+<p>The <strong>super()</strong> keyword allows us to call the __init__ function of a parent class</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 458px; height: 250px; left: 252px; top: 350px;" data-block-id="aac1a6eccaf5a82c8a6eb65b66599de5"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 13; font-size: 130%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, species)</span>:</span>
+        self.species = species
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(Animal)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+        super().__init__(<span class="hljs-string">"canine"</span>)
+        self.name = name
+    </code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 458px; height: 39px; left: 251px; top: 563px;" data-block-id="b070ccf2cfb33ed385d2ef0e66143aaa"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 14; font-size: 130%;" data-fragment-index="2"><pre class="python"><code class="hljs">bro = Dog(<span class="hljs-string">"Bro"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 458px; height: 39px; left: 251px; top: 602px;" data-block-id="512c39c6b8c177b6c2de7d11399abfbc"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 15; font-size: 130%;" data-fragment-index="3"><pre class="python"><code class="hljs">bro.name  <span class="hljs-comment"># Bro</span></code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 458px; height: 39px; left: 252px; top: 641px;" data-block-id="aa54ab0fd9d7830c9708c106789eabe7"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 16; font-size: 130%;" data-fragment-index="4"><pre class="python"><code class="hljs">bro.species  <span class="hljs-comment"># canine</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 885px; left: 41px; top: 255px;" data-block-id="be246fab7b0d09cdba002b8d9112d595"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 90%;" data-fragment-index="1" dir="ui">
+<p><span>In the example below, we initialize the child with both its own __init__ method <em>and</em> its parent's __init__ method:</span></p>
+</div></div></section><section data-id="d440b8d8b841c4aa30580b269d6e2360" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d6fdac5b04a36f35ce1817108b38a87d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Multiple Inheritance</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 945px; left: 8px; top: 159px;" data-block-id="f2892109770615781a70352c12999374"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;" data-fragment-index="0">
+<p>Python also allows classes to inherit from more than one parent class.</p>
+</div></div>
+
+
+<div class="sl-block" data-block-type="code" style="width: 801px; height: 426px; left: 92px; top: 210px;" data-block-id="758f38324e0bdf8376048af7a8a6728d"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 12; font-size: 95%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Aquatic</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name)</span>:</span>
+    self.name = name
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swim</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{self.name}</span> is swimming"</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"I am <span class="hljs-subst">{self.name}</span> of the sea!"</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ambulatory</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name)</span>:</span>
+    self.name = name
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">walk</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"<span class="hljs-subst">{self.name}</span> is walking"</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"I am <span class="hljs-subst">{self.name}</span> of the land!"</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Penguin</span><span class="hljs-params">(Aquatic, Ambulatory)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name)</span>:</span>
+    super().__init__(name=name)</code></pre></div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 801px; height: 65px; left: 92px; top: 615px;" data-block-id="9e283dc007744cecdfd4a21c003082af"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 14; font-size: 95%;" data-fragment-index="2"><pre class="python"><code class="hljs">jaws = Aquatic(<span class="hljs-string">"Jaws"</span>)
+lassie = Ambulatory(<span class="hljs-string">"Lassie"</span>)
+captain_cook = Penguin(<span class="hljs-string">"Captain Cook"</span>)</code></pre></div></div></section><section data-id="7ba7ded9a7b16072b13941569da855b4" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="a4fda9aa8d5a486726d6ec7cf76ccd21"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Multiple Inheritance <span style="font-size:0.7em">(continued)</span></p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 801px; height: 217px; left: 80px; top: 242px;" data-block-id="fc8a6f7edf1e86d59ba245587fc27c79"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 11;" data-fragment-index="0"><pre class="python"><code class="hljs">jaws.swim() <span class="hljs-comment"># 'Jaws is swimming'</span>
+jaws.walk() <span class="hljs-comment"># AttributeError: 'Aquatic' object has no attribute 'walk'</span>
+jaws.greet() <span class="hljs-comment"># 'I am Jaws of the sea!'</span>
+
+lassie.swim() <span class="hljs-comment"># AttributeError: 'Ambulatory' object has no attribute 'swim'</span>
+lassie.walk() <span class="hljs-comment"># 'Lassie is walking'</span>
+lassie.greet() <span class="hljs-comment"># 'I am Lassie of the land!'</span>
+
+captain_cook.swim() <span class="hljs-comment"># 'Captain Cook is swimming'</span>
+captain_cook.walk() <span class="hljs-comment"># 'Captain Cook is walking'</span>
+captain_cook.greet() <span class="hljs-comment"># 'I am Captain Cook of the sea!'</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 887px; left: 37px; top: 490px;" data-block-id="a7500e7913a664ae986739c48719df09"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="1">
+<p><strong>Penguin</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;inherits from both </span><strong>Aquatic</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;and </span><strong>Ambulatory</strong>, therefore instances of Penguin can call both the <strong>walk</strong> and <strong>swim</strong> methods.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 801px; height: 65px; left: 79px; top: 177px;" data-block-id="793872dd6062cfb46f735a1243be5395"><div class="sl-block-content" data-highlight-theme="solarized-light" style="z-index: 14;"><pre class="python"><code class="hljs">jaws = Aquatic(<span class="hljs-string">"Jaws"</span>)
+lassie = Ambulatory(<span class="hljs-string">"Lassie"</span>)
+captain_cook = Penguin(<span class="hljs-string">"Captain Cook"</span>)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 887px; left: 36px; top: 591px;" data-block-id="59cf7001b84375e8617c0b585a7389e9"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-fragment-index="2">
+<p><span style="color:rgb(51, 51, 51); text-align:start">What about the greet method for our instance of Penguin? </span></p>
+
+<p><span style="color:rgb(51, 51, 51); text-align:start">It is calling the Aquatic.greet() instead of Ambulatory.greet().</span></p>
+</div></div></section><section data-id="4e689849ffad5cf73dc432a35ac84312" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cc1637806c77d14c0b26fba72dc61024"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Method Resolution Order (MRO)</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 37px; top: 165px;" data-block-id="8c5b9cf80c73a440d1adb58db6ac1aea"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0">
+<p><span style="color:rgb(51, 51, 51); text-align:start">Whenever you create a class, Python sets a </span><strong>M</strong><span style="color:rgb(51, 51, 51); text-align:start">ethod </span><strong>R</strong><span style="color:rgb(51, 51, 51); text-align:start">esolution </span><strong>O</strong><span style="color:rgb(51, 51, 51); text-align:start">rder, or <strong>MRO</strong>, for that class, which is the order in which Python will look for methods on instances of that class. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 37px; top: 278px;" data-block-id="6c56b178f097771e6645e1351c00c23c"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="1">
+<p><span style="color:rgb(51, 51, 51); text-align:start">You can programmatically reference the MRO three ways:</span></p>
+
+<ul>
+	<li>
+<strong>__mro__</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;attribute on the class</span>
+</li>
+	<li>
+<span style="color:rgb(51, 51, 51); text-align:start">use the </span><strong>mro()</strong><span style="color:rgb(51, 51, 51); text-align:start">&nbsp;method on the class</span>
+</li>
+	<li>use the builtin <strong>help(</strong>cls<strong>)</strong> method</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 826px; height: 248px; left: 68px; top: 436px;" data-block-id="34eedb1705668e1b8911599d68a0b5db"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 14; font-size: 120%;" data-fragment-index="2"><pre class="python"><code class="hljs">Penguin.__mro__ 
+
+<span class="hljs-comment"># (&lt;class 'multiple.Penguin'&gt;, &lt;class 'multiple.Aquatic'&gt;, </span>
+<span class="hljs-comment">#  &lt;class 'multiple.Ambulatory'&gt;, &lt;class 'object'&gt;)</span>
+
+Penguin.mro() 
+
+<span class="hljs-comment"># [__main__.Penguin, __main__.Aquatic, __main__.Ambulatory, object]</span>
+
+help(Penguin) <span class="hljs-comment"># best for HUMAN readability -&gt; gives us a detailed chain </span>
+</code></pre></div></div></section><section data-id="3c1af4b956691df06156bf679da3f345" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="3389b4e04d664c046263de76f72e3d35"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Polymorphism</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 37px; top: 165px;" data-block-id="1cc0973e52bf10e9ab5b42a11f4cc244"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%;" data-fragment-index="0">
+<p><font color="#333333">A key principle in OOP is the idea of polymorphism - an object can take on many (poly) forms (morph).</font></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 45px; top: 256px;" data-block-id="f5f3a05edc88b4efb58d87a9bbbfa99e"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="1">
+<p>While a formal definition of polymorphism is more difficult, here are two important practical applications:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 37px; top: 497px;" data-block-id="e397709ce6d60c7e5a182284062c8c70"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 95%;" data-fragment-index="4">
+<p>2. The same operation works for different kinds of objects</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 902px; left: 52px; top: 350px;" data-block-id="bf00aacf6afbf95afd0ecfdd13a1b99f"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 95%;" data-fragment-index="2">
+<p>1. The same class method works in a similar way for different classes</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="782bfa60109b788cb8159cd6446c8441" style="min-width: 30px; min-height: 30px; width: 500px; height: 141px; left: 231px; top: 545px;"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 15;" data-fragment-index="5"><pre class="ruby"><code class="hljs">sample_list = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+sample_tuple = (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
+sample_string = <span class="hljs-string">"awesome"</span>
+
+len(sample_list)
+len(sample_tuple)
+len(sample_string)</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 65px; left: 231px; top: 401px;" data-block-id="dac4e0e4a35ff1da9efe42d579c06d3c"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 17;" data-fragment-index="3"><pre class="ruby"><code class="hljs">Cat.speak()  <span class="hljs-comment"># meow</span>
+Dog.speak()  <span class="hljs-comment"># woof</span>
+Human.speak()  <span class="hljs-comment"># yo</span></code></pre></div></div></section><section data-id="7eb680af64ac396ba7dd1d0fa748ef68" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="1620513de9ba6ec3406cc1edc909491b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Polymorphism &amp; Inheritance</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 902px; left: 44px; top: 169px;" data-block-id="d8052c84a0751150e35c499a015c9d9f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 95%;">
+<p>1. The same class method works in a similar way for different classes</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="73240ffb91a159c1ca34eb93c51ee7d0" style="min-width: 30px; min-height: 30px; width: 892px; height: 257px; left: 34px; top: 432px;"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 13; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">speak</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">raise</span> NotImplementedError(<span class="hljs-string">"Subclass needs to implement this method"</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(Animal)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">speak</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"woof"</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span><span class="hljs-params">(Animal)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">speak</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"meow"</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 876px; left: 42px; top: 302px;" data-block-id="8ba37950c1d8cde5d6b98ffdd502753a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<ul>
+	<li class="fragment visible" data-fragment-index="2"><span style="color:rgb(51, 51, 51); text-align:start">Each subclass will have a different implementation of the method.</span></li>
+	<li class="fragment visible" data-fragment-index="3"><font color="#333333">If the method is not implemented in the subclass, the version in the parent class is called instead.</font></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 902px; left: 29px; top: 224px;" data-block-id="726d988a9e3ad56d6e5ad96c60d96081"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 95%;" data-fragment-index="0">
+<p style="font-size:25.2px"><span style="color:rgb(51, 51, 51); text-align:start">A common implementation of this is to have a method in a base (or parent) class that is overridden by a subclass. This is called <strong>method overriding</strong>.</span></p>
+</div></div></section><section data-id="7a9f756779b22585b3fca84e27e4c92f" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d90b3b321ed4d4d77310fed76ad5eb7a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Special Methods</p>
+</div></div>
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 37px; top: 471px;" data-block-id="0a0c4b88e8c128838367f69a5317f1d2"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 90%; text-align: center;" data-fragment-index="3">
+<p>Python classes have special (also known as "magic") methods, that are dunders (i.e. double underscore-named).&nbsp;</p>
+</div></div>
+
+<div class="sl-block" data-block-type="code" style="width: 377px; height: 54px; left: 293px; top: 296px;" data-block-id="404a17dc51a42cccde5f483827f96425"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 13; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-number">8</span> + <span class="hljs-number">2</span>  <span class="hljs-comment"># 10</span>
+<span class="hljs-string">"8"</span> + <span class="hljs-string">"2"</span>  <span class="hljs-comment"># 82</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 894px; left: 29px; top: 178px;" data-block-id="2ccea8f377bf504f095abaef48c4c941"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;">
+<p>2. (Polymorphism) The same operation works for different kinds of objects</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 161px; top: 237px;" data-block-id="7aa31b8fec7d9f6f50f8f6ea6241076b"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;" data-fragment-index="0">
+<p>How does the following work in Python?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 161px; top: 379px;" data-block-id="d39d6a2de5e25037859cf898b5fffae3"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 90%;" data-fragment-index="2">
+<p>The answer is "special methods"!</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 33px; top: 582px;" data-block-id="640410d0cc9a35aec2e993040de70ff1"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 90%; text-align: center;" data-fragment-index="4">
+<p><span style="font-size:25.2px">These are methods with special names that give instructions to Python for how to deal with objects.</span></p>
+</div></div></section><section data-id="1c6348c57547ea993c74298d623c1f5a" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="8f55872f86b219dae4b8ebc280a93519"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Special Methods Example</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 377px; height: 54px; left: 292px; top: 280px;" data-block-id="70e2993fa3fc442ffbc4e3965f48dd92"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 12; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-number">8</span> + <span class="hljs-number">2</span>  <span class="hljs-comment"># 10</span>
+<span class="hljs-string">"8"</span> + <span class="hljs-string">"2"</span>  <span class="hljs-comment"># 82</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 894px; left: 30px; top: 210px;" data-block-id="2adbfb2c5ccbe9d851f53cbdef736900"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="0">
+<p>What is happening in our example?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 29px; top: 388px;" data-block-id="c92c289d31fd7176e68c446dfe071e32"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 90%; text-align: center;" data-fragment-index="2">
+<p>The <strong>+</strong> operator is shorthand for a special method called <strong>__add__()</strong> that gets called on the first operand.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 887px; left: 33px; top: 490px;" data-block-id="87447998fc52eea14b619fdc954492c2"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 90%; text-align: center;" data-fragment-index="3">
+<p>If the first (left) operand is an instance of <strong>int</strong>, __add__() does mathematical <strong>addition</strong>. If it's a <strong>string</strong>, it does string <strong>concatenation</strong>.</p>
+</div></div></section><section data-id="234a3598a508521eeb2b6a222d4f1ffc" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 75px; height: auto;" data-block-id="c318174a166898a8bd09a90386094b5c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p>Special Methods Applied</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 483px; height: 166px; left: 239px; top: 336px;" data-block-id="bf4b172ca4d5f523210661762c222f17"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 11; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, height)</span>:</span>
+        self.height = height  <span class="hljs-comment"># in inches</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.height</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 894px; left: 30px; top: 210px;" data-block-id="89e2855566f76e2b5a3abf241b3d4ca6"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" data-fragment-index="0" dir="ui">
+<p>Therefore, you can declare special methods on your own classes to mimic the behavior of builtin objects, like so using <strong>__len__</strong>:</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 483px; height: 58px; left: 238px; top: 502px;" data-block-id="7147649352c1dc300552c05c73d5cc18"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 14; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs">Colt = Human(<span class="hljs-number">60</span>)
+len(Colt)  <span class="hljs-comment"># 60</span></code></pre></div></div></section><section data-id="75a146c933dec3cd8249ccd2ac3b8453" class="past" style="display: none;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 75px; height: auto;" data-block-id="7071d8c0bf77f78c8b8ad22f33b47c78"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p style="text-align:center">String Representation</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 529px; height: 123px; left: 217px; top: 383px;" data-block-id="0cef09290af62c63026d56cfe846f40d"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 11; font-size: 120%;" data-fragment-index="2"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span>:</span>
+    <span class="hljs-keyword">pass</span>
+
+colt = Human()
+print(colt)  <span class="hljs-comment"># &lt;__main__.Human at 0x1062b8400&gt;</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 178px;" data-block-id="a3b6a7faddd5f1a7c001120981fd30b4"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;" data-fragment-index="0" dir="ui">
+<p>The most common use-case for special methods is to make classes "look pretty" in strings.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 640px; left: 160px; top: 304px;" data-block-id="6129c25df215c58b0c29d57a31102ef4"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 90%;" dir="ui" data-fragment-index="1">
+<p>By default, our classes look ugly:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 141px; top: 560px;" data-block-id="7f39b311b917cf5859a090e74dd14bde"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;" dir="ui" data-fragment-index="3">
+<p>We can use special methods to make it look way better!</p>
+</div></div></section><section data-id="531b8965d513a8c7d11104dbd0a5a53e" class="past" style="display: block;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 75px; height: auto;" data-block-id="5ea88ca00baa9cf6a3be0a1598665422"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p style="text-align:center">String Representation Example</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="code" style="width: 529px; height: 252px; left: 217px; top: 263px;" data-block-id="9e3791f8027f8c5daa7ee983d5512a10"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 11; font-size: 120%;" data-fragment-index="1"><pre class="python"><code class="hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name=<span class="hljs-string">"somebody"</span>)</span>:</span>
+        self.name = name
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__repr__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.name
+        
+dude = Human()
+print(dude)  <span class="hljs-comment"># "somebody"</span>
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 529px; height: 90px; left: 217px; top: 487px;" data-block-id="d9416246d3742e95a0369ab2ee4fd14c"><div class="sl-block-content fragment visible" data-highlight-theme="solarized-light" style="z-index: 12; font-size: 120%;" data-fragment-index="2"><pre class="python"><code class="hljs">colt = Human(name=<span class="hljs-string">"Colt Steele"</span>)
+print(<span class="hljs-string">f"<span class="hljs-subst">{colt}</span> is totally rad (probably)"</span>) 
+<span class="hljs-comment"># "Colt Steele is totally rad (probably)"</span></code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 690px; left: 135px; top: 178px;" data-block-id="56199631285372c30e4d1d890d8b8d27"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 90%;" dir="ui" data-fragment-index="0">
+<p>The __repr__ method is one of several ways to provide a nicer string representation:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 921px; left: 33px; top: 598px;" data-block-id="1d0bd02e9ea199b76f62a95329938447"><div class="sl-block-content fragment visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 90%;" dir="ui" data-fragment-index="3">
+<p>There are also several other dunders to return classes in string formats (notably __str__ and __format__), and choosing one is <a href="https://stackoverflow.com/questions/1436703/difference-between-str-and-repr-in-python" target="_blank">a bit complicated!</a></p>
+</div></div></section><section data-id="597a7def90ea012f2095418425e71556" class="past" style="display: block;" hidden="" aria-hidden="true">
+
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 81px; top: 75px; height: auto;" data-block-id="26b787453490cd59ec2fd937cf880243"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; font-size: 180%; color: rgb(0, 150, 136);">
+<p style="text-align:center">Recap</p>
+</div></div>
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="width: 722px; left: 146px; top: 210px; height: auto;" data-block-id="c00b844f671e5e397b5d9fee023db819"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li class="fragment visible" data-fragment-index="0">OOP is a way of programming by grouping things into hierarchical classes (objects)</li>
+	<li class="fragment visible" data-fragment-index="1">OOP uses encapsulation and abstraction to provide a class interface to call methods and read/modify attributes</li>
+	<li class="fragment visible" data-fragment-index="2">Classes can inherit from other classes and use the same methods to do different things (polymorphism)</li>
+	<li class="fragment visible" data-fragment-index="3">We can enhance our custom classes with special/magic/dunder methods</li>
+</ul>
+</div></div></section><section data-id="371cc6c5db6b80eb42537d517cba93bd" class="present" style="display: block;"><div class="sl-block" data-block-type="text" style="height: auto; width: 753px; left: 104px; top: 56px;" data-block-id="1814c1896108aebc819a649fc863ee44"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 130%; letter-spacing: -0.010000000000000009em; line-height: 0.8580000000000001;" data-has-letter-spacing="" data-has-line-height="">
+<h1><span style="font-size:5.0em"><span style="color:#009688">YOUR</span> <span style="color:#00bcd4">TURN</span></span></h1>
+</div></div></section>
+				</div>
+					<div id="theme-html-output"></div>
+				<div class="deck-kudos" style="opacity: 1;">
+					<button class="kudos-button kudos-trigger" data-kudos-id="1168590" data-kudoed-by-user="false">
+						<div class="kudos-heart">
+							<span class="kudos-icon icon i-heart-fill"></span>
+						</div>
+						<div class="kudos-count" data-kudos-value="8" data-kudos-id="1168590"></div>
+					</button>
+				</div>
+			<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="progress" style="display: block;"><span style="width: 1583px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+YOUR TURN
+</div></div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill" style="left: 639.5px;">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">Object Oriented Programming</h4>
+			<p class="pill-description">By colt</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill" style="left: 724px;">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card extra-wide">
+		<div class="deck-social">
+			<a href="http://python.slides.com/colt/lists-18#" class="deck-social-button facebook-share-button" data-tooltip="Share on Facebook">
+				<span class="icon i-facebook"></span>
+			</a>
+			<a href="http://python.slides.com/colt/lists-18#" class="deck-social-button twitter-share-button" data-tooltip="Share on Twitter">
+				<span class="icon i-twitter"></span>
+			</a>
+			<a href="http://python.slides.com/colt/lists-18#" class="deck-social-button google-share-button" data-tooltip="Share on Google+">
+			</a>
+		</div>
+
+		<div class="deck-promotion">
+			<a class="button cta" href="http://python.slides.com/eschoppik1/oop" data-tooltip="This deck was copied from &#39;Object Oriented Programming&#39; by eschoppik1">Source: <span class="text-semi-bold">eschoppik1</span></a>
+		</div>
+
+
+		<div class="deck-options">
+			<a class="fullscreen-button" data-tooltip="Fullscreen" href="http://python.slides.com/colt/lists-18#"><span class="icon i-fullscreen"></span></a>
+			<a class="comment-button" data-tooltip="Comments" data-scroll-to="" href="http://python.slides.com/colt/lists-18#comments" data-scroll-to-offset="-90"><span class="icon i-comment-stroke"></span></a>
+			<a class="share-button" data-tooltip="Share" href="http://python.slides.com/colt/lists-18#"><span class="icon i-share"></span></a>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="details">
+			<div class="deck-info">
+				<h3 class="title">Object Oriented Programming</h3>
+				<ul class="deck-meta">
+					<li data-tooltip="Published date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2018-02-05 06:55:23 UTC">9 months ago</time>
+					</li>
+					<li data-tooltip="Kudos" data-tooltip-delay="500">
+						<span class="icon i-heart-fill"></span>
+						<span class="value" data-kudos-value="8" data-kudos-id="1168590"></span>
+					</li>
+					<li data-tooltip="Views" data-tooltip-delay="500">
+						<span class="icon i-eye"></span>
+						<span class="value">1,068</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="http://python.slides.com/colt" class="username">colt</a>
+		</h3>
+		<p class="description"></p>
+		<ul class="links">
+			
+			
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+	<section class="comments" id="comments">
+		<div id="disqus_thread"><iframe id="dsq-app8673" name="dsq-app8673" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Object Oriented Programming_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 390px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+	</section>
+
+	<section class="deck-list">
+		<h2>More from <a href="http://python.slides.com/colt">colt</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="http://python.slides.com/colt/python-sql"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/a885937fcb2c59e1562c486b0e644d9a/thumb.jpg?1541786687)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">PYTHON + SQL</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://python.slides.com/colt">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">colt</span>
+      </a>
+      <div class="stats">
+        <div>12<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://python.slides.com/colt/web-scraping"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/26f692cb3e91f1651ebce0ff2293829b/thumb.jpg?1507567814)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">The Command Line(MAC)</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://python.slides.com/colt">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">colt</span>
+      </a>
+      <div class="stats">
+        <div>1862<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://python.slides.com/colt/regex"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/99e4d2fda0f9920c7f48a26302fd034d/thumb.jpg?1517357203)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">REGEX</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://python.slides.com/colt">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">colt</span>
+      </a>
+      <div class="stats">
+        <div>632<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="http://python.slides.com/colt/command-line-28"></a>
+  <div class="deck-image" style="background-image: url(https://s3.amazonaws.com/media-p.slid.es/thumbnails/26f692cb3e91f1651ebce0ff2293829b/thumb.jpg?1507567814)"></div>
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Command Line(Windows)</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="http://python.slides.com/colt">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">colt</span>
+      </a>
+      <div class="stats">
+        <div>1964<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+      </div>
+      <footer class="global-footer global-footer-minimal">
+  <div class="legal">
+    <a href="http://help.slides.com/">Help &amp; Support</a>
+    • <a href="http://python.slides.com/terms?root=true">Terms</a>
+    • <a href="http://python.slides.com/privacy?root=true">Privacy</a>
+    • <span class="copyright">© 2018 Slides, Inc.</span>
+   </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+    
+<script>
+	var SLConfig = {"team":{"id":1341,"name":"Python","slug":"python","logo":null,"default_theme_id":1610,"user_count":2,"allow_scripts":false,"themes":[{"id":1610,"created_at":"2017-09-15T03:56:16.141Z","updated_at":"2017-09-19T23:11:35.937Z","name":"Python Course","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/2134bea753a4e91666b5a83255832b7b/thumb.jpg?1505862694","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700}],"beta_new_editor":true,"manually_upgraded":false,"allow_public_decks":true},"deck":{"id":1168590,"slug":"lists-18","title":"Object Oriented Programming","description":"","width":960,"height":700,"visibility":"all","published_at":"2018-02-05T06:55:23.187Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/959448b014c56deb91620856443cdd0e/thumb.jpg?1505866999","view_count":1068,"user":{"id":757808,"username":"colt","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":1341,"settings":{"id":608348,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":1610,"theme_font":"overpass2","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":31,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1519101385450,"font_typekit":null,"font_google":null},"theme":{"id":1610,"created_at":"2017-09-15T03:56:16.141Z","updated_at":"2017-09-19T23:11:35.937Z","name":"Python Course","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/2134bea753a4e91666b5a83255832b7b/thumb.jpg?1505862694","sanitize_messages":null,"slide_template_ids":[],"font_typekit":"","font_google":"","width":960,"height":700},"user":{"id":757808,"username":"colt","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb937abb693a7a0e2befe176fd6e01c?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":1341,"settings":{"id":608348,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"owner","manager":true,"activated":true}}};
+</script>
+    <script src="./Object Oriented Programming_files/application-b4c426e65ced405dd4cc52ea178920a3177cfcf4b88be0136ce0c8e3f549770a.js.download" defer="defer"></script>
+    	<script src="./Object Oriented Programming_files/deck-d2f6cef3f008bdacb7ffb433e086d30c64d64b5a67eb39b66b2d4bfb92bc2015.js.download" defer="defer"></script>
+	
+
+
+  
+
+<script type="text/javascript" src="./Object Oriented Programming_files/zoom-ad5c30ae3cd80db38535c45e59d592e670322cf70fa1ddc37b883260bc223c5b.js.download"></script><script type="text/javascript" src="./Object Oriented Programming_files/highlight-98b7e4f57642cc5678d24e9df9c4f1cde21ed41a777a9def33d111a6c64faf30.js.download"></script><iframe style="display: none;" src="./Object Oriented Programming_files/saved_resource(1).html"></iframe></body></html>
